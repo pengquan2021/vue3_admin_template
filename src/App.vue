@@ -1,17 +1,11 @@
 <template>
-  <div>
-
-  </div>
+  <div></div>
 </template>
 
 <script setup lang="ts">
-  const fun = ()=>{
 
-    console.log("测试");
-  }
-  fun();
+
+      console.log(  "xuexi");
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
