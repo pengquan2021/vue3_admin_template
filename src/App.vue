@@ -5,7 +5,8 @@
 <script setup lang="ts">
 
 
-      console.log(  "xuexi");
+
+   console.log("xuexi");
 </script>
 
 <style scoped></style>
