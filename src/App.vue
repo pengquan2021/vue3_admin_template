@@ -1,12 +1,15 @@
 <template>
-  <div></div>
+  <RouterView></RouterView>
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue'
+// import request from './utils/request'
+import { reqLogin } from './api/user'
 
-
-
-   console.log("xuexi");
+onMounted(() => {
+  reqLogin({ username: 'admin', password: '111111' })
+})
 </script>
 
-<style scoped></style>
+<style scoped lang="scss"></style>
