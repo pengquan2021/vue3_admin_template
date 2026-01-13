@@ -30,14 +30,14 @@
     <el-form-item label="平台属性">
       <el-form :inline="true">
         <el-form-item
-          v-for="(item) in attrArr"
+          v-for="item in attrArr"
           :key="item.id"
           :label="item.attrName"
           style="width: 250px"
         >
           <el-select v-model="item.attrIdAndValueId">
             <el-option
-              v-for="(attrValue) in item.attrValueList"
+              v-for="attrValue in item.attrValueList"
               :key="attrValue.id"
               :label="attrValue.valueName"
               :value="`${item.id}:${attrValue.id}`"
@@ -49,14 +49,14 @@
     <el-form-item label="销售属性">
       <el-form :inline="true">
         <el-form-item
-          v-for="(item) in saleArr"
+          v-for="item in saleArr"
           :key="item.id"
           :label="item.saleAttrName"
           style="width: 250px"
         >
           <el-select v-model="item.saleIdAndValueId">
             <el-option
-              v-for="(saleAttrValue) in item.spuSaleAttrValueList"
+              v-for="saleAttrValue in item.spuSaleAttrValueList"
               :key="saleAttrValue.id"
               :label="saleAttrValue.saleAttrValueName"
               :value="`${item.id}:${saleAttrValue.id}`"

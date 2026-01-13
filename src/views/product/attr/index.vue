@@ -27,10 +27,10 @@
             prop="attrName"
           ></el-table-column>
           <el-table-column label="属性值名称">
-            <template #="{ row,  }">
+            <template #="{ row }">
               <el-tag
                 style="margin: 5px"
-                v-for="(item) in row.attrValueList"
+                v-for="item in row.attrValueList"
                 :key="item.id"
               >
                 {{ item.valueName }}
@@ -99,7 +99,7 @@
           <el-table-column label="属性值名称">
             <template #="{ row, $index }">
               <el-input
-                :ref="(vc:any) => inputArr[$index] = vc"
+                :ref="(vc: any) => (inputArr[$index] = vc)"
                 v-if="row.flag"
                 @blur="toLook(row, $index)"
                 placeholder="请输入属性值名称"

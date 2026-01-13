@@ -10,7 +10,7 @@
         >
           <!-- option中，label为显示文字，value为select下拉菜单收集的数据 -->
           <el-option
-            v-for="(c1) in categoryStore.c1Arr"
+            v-for="c1 in categoryStore.c1Arr"
             :key="c1.id"
             :label="c1.name"
             :value="c1.id"
@@ -25,7 +25,7 @@
           @change="handler1"
         >
           <el-option
-            v-for="(c2) in categoryStore.c2Arr"
+            v-for="c2 in categoryStore.c2Arr"
             :key="c2.id"
             :label="c2.name"
             :value="c2.id"
@@ -39,7 +39,7 @@
           v-model="categoryStore.c3Id"
         >
           <el-option
-            v-for="(c3) in categoryStore.c3Arr"
+            v-for="c3 in categoryStore.c3Arr"
             :key="c3.id"
             :label="c3.name"
             :value="c3.id"

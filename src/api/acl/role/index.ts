@@ -63,10 +63,14 @@ export const reqSetPermisstion = (roleId: number, permissionId: number[]) => {
           if (Array.isArray(value)) {
             // 数组转换为多个同名参数
             value.forEach((item) => {
-              parts.push(`${encodeURIComponent(key)}=${encodeURIComponent(item)}`)
+              parts.push(
+                `${encodeURIComponent(key)}=${encodeURIComponent(item)}`,
+              )
             })
           } else if (value !== null && value !== undefined) {
-            parts.push(`${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
+            parts.push(
+              `${encodeURIComponent(key)}=${encodeURIComponent(value)}`,
+            )
           }
         }
         return parts.join('&')

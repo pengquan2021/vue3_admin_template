@@ -58,10 +58,15 @@
           >
             编辑
           </el-button>
-          
-          <el-popconfirm title="确定删除该职位吗？" @confirm="removeRole(row.id)">
+
+          <el-popconfirm
+            title="确定删除该职位吗？"
+            @confirm="removeRole(row.id)"
+          >
             <template #reference>
-              <el-button type="primary" size="small" icon="Delete">删除</el-button>
+              <el-button type="primary" size="small" icon="Delete">
+                删除
+              </el-button>
             </template>
           </el-popconfirm>
         </template>
@@ -102,7 +107,7 @@
   </el-dialog>
   <!-- 抽屉组件：用于分配权限 -->
 
-  <el-drawer v-model="drawer" >
+  <el-drawer v-model="drawer">
     <template #header>
       <h4>分配菜单与按钮权限</h4>
     </template>
@@ -177,7 +182,6 @@ const defaultProps = {
   children: 'children',
   label: 'name',
 }
-
 
 //挂载发请求
 onMounted(() => {
@@ -309,7 +313,7 @@ const confirmClick = async () => {
 }
 
 //删除已有的职位
-const removeRole = async(roleId: number)=>{
+const removeRole = async (roleId: number) => {
   let result: any = await reqRemoveRole(roleId)
   if (result.code == 200) {
     ElMessage({ type: 'success', message: '删除成功' })
@@ -320,7 +324,7 @@ const removeRole = async(roleId: number)=>{
 }
 
 //自定义校验规则的回调
-const validatorRoleName = (_:any, value: any, callBack: any) => {
+const validatorRoleName = (_: any, value: any, callBack: any) => {
   if (value && value.trim().length >= 2) {
     callBack()
   } else {
